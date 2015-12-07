@@ -2,7 +2,7 @@ general:
   build_dir: api
 
   artifacts:
-        - /trial/
+        - /tmp/circle-artifacts.TbFnG0E
  # To use GCC and G++ 4.9
 machine:
   pre:
