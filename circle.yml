@@ -6,4 +6,4 @@ machine:
     - sudo update-alternatives --install /usr/bin/g++ g++ /usr/bin/g++-4.9 20
 test:
     post:
-      - cp /usr/bin/*.o $CIRCLE_ARTIFACTS
+      - cp ./helloworld.cpp $CIRCLE_ARTIFACTS
