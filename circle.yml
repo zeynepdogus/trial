@@ -1,12 +1,9 @@
-general:
-  build_dir: api
-
-  artifacts:
-        - /tmp/circle-artifacts.TbFnG0E
- # To use GCC and G++ 4.9
 machine:
   pre:
     - sudo update-alternatives --install /usr/bin/gcc gcc /usr/bin/gcc-4.6 10
     - sudo update-alternatives --install /usr/bin/g++ g++ /usr/bin/g++-4.6 10
     - sudo update-alternatives --install /usr/bin/gcc gcc /usr/bin/gcc-4.9 20
     - sudo update-alternatives --install /usr/bin/g++ g++ /usr/bin/g++-4.9 20
+  test:
+    post:
+      - cp helloworld.o $CIRCLE_ARTIFACTS
